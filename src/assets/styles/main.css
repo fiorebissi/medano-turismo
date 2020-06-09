@@ -1,0 +1,9 @@
+.slide {
+    display: none;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .active {
+    display: block;
+  }

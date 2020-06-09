@@ -1,0 +1,9 @@
+@import "animate.css/animate.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.Home__header {
+    min-height: 150px;
+    background-color: rgb(196,175,145);
+  }
