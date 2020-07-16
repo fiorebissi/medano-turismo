@@ -5,7 +5,39 @@ import '../assets/styles/home.css';
 
 const Header = () => {
   return (
-    <div className='Home__header flex items-center mx-auto text-white border-b-2 border-gray-700 border-opacity-75 relative '>
+    <>
+    <i className="icon-menu burger-button" id="burger-menu"></i>
+    <header className='header'>
+      <div className='container'>
+        <figure className='logo'>
+            <img src={Logo} height='50' alt='Logo' />
+        </figure>
+        <nav className='menu'>
+          <ol>
+            <li>
+              <a className='link' href="#excursiones">Excursiones</a>
+            </li>
+            <li>
+              <a className='link' href="#quienessomos">¿Quiénes Somos?</a>
+            </li>
+            <li>
+              <a className='link' href="#contacto">Contacto</a>
+            </li>
+          </ol>
+
+        </nav>
+
+      </div>
+
+    </header>
+    </>
+    
+  );
+};
+
+export default Header;
+
+{/* <div className='Home__header flex items-center mx-auto text-white border-b-2 border-gray-700 border-opacity-75 relative '>
       <div className='w-full flex'>
         <div className='relative flex w-1/4'>
           <div className='text-center'>
@@ -40,8 +72,4 @@ const Header = () => {
           </a>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default Header;
+    </div> */}
