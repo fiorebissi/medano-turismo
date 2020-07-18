@@ -1,10 +1,42 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaEnvelope, FaPhone } from 'react-icons/fa';
-import { MdCopyright } from 'react-icons/md';
+import { FaEnvelope, FaPhone } from 'react-icons/fa';
+// import { MdCopyright } from 'react-icons/md';
+import '../assets/styles/home.css';
 
 const Footer = () => {
   return (
-    <footer className='grid grid-cols-3'>
+    <footer className='footer'>
+      <div className='cont'>
+        <div className='footer-contacto'>
+          <p>Contactanos</p>
+          <p>
+            <FaEnvelope />
+            {' '}
+            <a href='mailto:elmedanoturismo@info.com.ar'>elmedanoturismo@info.com.ar</a>
+          </p>
+          <p>
+            <FaPhone />
+            <a href='tel:+549297465812'>+54 9 297 465812</a>
+          </p>
+
+        </div>
+        <div>
+          <p>
+            Designed with 💗 by
+            {' '}
+            <a href='mailto:fiorellabissi@hotmail.com'>Fiorella Bissi</a>
+          </p>
+        </div>
+      </div>
+
+    </footer>
+
+  );
+};
+
+export default Footer;
+
+{ /* <footer className='grid grid-cols-3'>
       <div>
         Lorem ipsum dolor
         <br />
@@ -37,9 +69,4 @@ const Footer = () => {
         </div>
       </div>
 
-    </footer>
-
-  );
-};
-
-export default Footer;
+    </footer> */ }

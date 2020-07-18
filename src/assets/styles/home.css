@@ -79,11 +79,15 @@
 
   figure {
     margin: 0;
+  }
+
+  figure img {
+    margin: 0 auto;
     width: 190px;
     height: auto;
   }
 
-  .container {
+  .cont {
     max-width: 1000px;
     width: 100%;
     flex:1;
@@ -104,19 +108,168 @@
     line-height: 40px;
     text-align: center;
     position: fixed;
-    z-index: 4;
+    z-index: 2;
     left: 5px;
     top: 5px;
     color: white;
   }
 
-  @media screen and (max-width: 1023px){
-    .container {
+  /* SECCION HERO */
+
+  .hero {
+    height: 500px;
+    width: 100vw;
+    /* background-image: url('../static/20190104_204453_023_01.jpg');
+    background-repeat: no-repeat;
+    background-size: auto; */
+    position: relative;
+    overflow: hidden;
+    padding: 2em;
+  }
+   .hero-image{
+    object-fit: auto;
+    position: absolute;
+    z-index: 1;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* SECCION EXCURSIONES */
+
+  .excursiones{
+    background-color: rgba(196,175,145,.5);
+  }
+
+  .event-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .event {
+    margin: 1%;
+    width: 48%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4fbff;
+  }
+
+  .event img {
+    width: 480px;
+  height: 200px;
+  object-fit: cover
+  }
+
+  .event-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+  .event-description {
+    text-align: left;
+  }
+  .event-url {
+    color: #056fff;
+    border: 1px solid;
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  /* SECCION CONTACTO */
+  .contact {
+    background-color: rgba(123,168,164,.8);
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .form-email input {
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px 20px 10px 25px;
+    background-image: url('../static/envelope.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+  }
+  .form-email button {
+    display: block;
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+    border: 2px solid gray;
+  }
+  .social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-size: 50px 50px;
+  }
+
+  /* FOOTER */
+  .footer {
+    color: white;
+  background-color: #1b2127;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  }
+
+  .footer a {
+    color: white;
+  }
+  .footer-contacto {
+    flex-direction: row;
+  }
+  .footer-contacto p {
+    display: inline;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .cont {
       padding: 0;
     }
+    .hero {
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      padding: 2em;
+    }
+    .hero-image{
+      position: absolute;
+      z-index: 1;
+      left:0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2em;
+      z-index: 2;
+    }
+
 
   }
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: 767px) {
     .burger-button {
       display: block;
     }
@@ -136,14 +289,13 @@
       font-size: 2em;
       margin-bottom: .5em;
     }
-  
     .header .logo {
       text-align: center;
     }
     .menu {
       position: fixed;
-      background: rgba(5,111,255,.8);
-      z-index: 3;
+      background: rgba(196,175,145,.8);
+      z-index: 1;
       top: 0;
       left: -100vw;
       width: 100vw;
@@ -153,19 +305,59 @@
       align-items: center;
       justify-content: center;
       transition: .3s;
-  
+
     }
     .menu.is-active{
       left: 0;
     }
+    .event {
+      width: auto;
+      flex-shrink: initial;
+    }
+
+    .event img {
+      width: 100%;
+    }
   }
 
   @media screen and (max-width: 480px){
-
+    h1{
+      font-size: 1.5em;
+    }
+    .event-detail {
+      /* 1em = 16px */
+      margin: -2em .5em .5em;
+      padding: 1em;
+    }
+    .contact {
+      height: auto;
+      padding: 1em 0;
+      text-align: center;
+      display: block;
+    }
+    .form-email button {
+      margin: 1em auto;
+    }
+    .form-email h3 {
+      margin-top: 0;
+    }
+    .footer {
+      display: block;
+      text-align: center;
+      border: 1px solid transparent;
+    }
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background-size: 100%;
+    }
   }
 
   @media screen and (max-width: 320px){
-
+    h1{
+      font-size: 1.2em;
+    }
+    .hero{
+      padding: 2em 1em;
+    }
   }
-
-  

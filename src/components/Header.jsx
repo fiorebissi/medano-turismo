@@ -1,43 +1,69 @@
 import React from 'react';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
 import Logo from '../assets/static/Medano-color.png';
 import '../assets/styles/home.css';
 
 const Header = () => {
+  // const ipad = window.matchMedia('screen and (max-width: 767px)');
+  // const mobile = window.matchMedia('screen and (max-width: 480px');
+  // const menu = document.querySelector('menu');
+  // const burgerButton = document.querySelector('#burger-menu');
+
+  // function hideShow() {
+  //   if (menu.classList.contains('is-active')) {
+  //     menu.classList.remove('is-active');
+  //   } else {
+
+  //     menu.classList.add('is-active');
+  //   }
+  // }
+
+  // function validation(e) {
+
+  //   if (ipad || mobile) {
+  //     burgerButton.addEventListener('click', hideShow);
+  //     console.log('Hola');
+  //   } else {
+  //     burgerButton.removeEventListener('click', hideShow);
+  //     console.log('chau :(');
+  //   }
+  //   console.log(e.matches);
+  // }
+  // validation(ipad);
+  // ipad.addListener(validation);
+
   return (
     <>
-    <i className="icon-menu burger-button" id="burger-menu"></i>
-    <header className='header'>
-      <div className='container'>
-        <figure className='logo'>
+      <i className='icon-menu burger-button' id='burger-menu' />
+      <header className='header'>
+        <div className='cont'>
+          <figure className='logo'>
             <img src={Logo} height='50' alt='Logo' />
-        </figure>
-        <nav className='menu'>
-          <ol>
-            <li>
-              <a className='link' href="#excursiones">Excursiones</a>
-            </li>
-            <li>
-              <a className='link' href="#quienessomos">¿Quiénes Somos?</a>
-            </li>
-            <li>
-              <a className='link' href="#contacto">Contacto</a>
-            </li>
-          </ol>
+          </figure>
+          <nav className='menu'>
+            <ol>
+              <li>
+                <a className='link' href='#excursiones'>Excursiones</a>
+              </li>
+              <li>
+                <a className='link' href='#quienessomos'>¿Quiénes Somos?</a>
+              </li>
+              <li>
+                <a className='link' href='#contacto'>Contacto</a>
+              </li>
+            </ol>
 
-        </nav>
+          </nav>
 
-      </div>
+        </div>
 
-    </header>
+      </header>
     </>
-    
   );
 };
 
 export default Header;
 
-{/* <div className='Home__header flex items-center mx-auto text-white border-b-2 border-gray-700 border-opacity-75 relative '>
+{ /* <div className='Home__header flex items-center mx-auto text-white border-b-2 border-gray-700 border-opacity-75 relative '>
       <div className='w-full flex'>
         <div className='relative flex w-1/4'>
           <div className='text-center'>
@@ -72,4 +98,4 @@ export default Header;
           </a>
         </div>
       </div>
-    </div> */}
+    </div> */ }

@@ -1,18 +1,21 @@
 export default [{
-  img: 'https://elmedanoturismo.com.ar/img/IMG-20190617-WA0045.jpg',
+  id: 1,
+  img: 'https://elmedanoturismo.com.ar/img/isla_de_los_pajaros.jpg',
   alt: 'Península Valdés',
   title: 'Península Valdés',
-  description: 'Península Valdés Sur + Ballenas',
+  description: 'Isla de los Pájaros',
 
 },
 {
-  img: 'https://elmedanoturismo.com.ar/img/IMG-20190617-WA0046.jpg',
-  alt: 'El Doradillo',
-  title: 'El Doradillo',
-  description: 'El Doradillo + ballenas',
+  id: 2,
+  img: 'https://elmedanoturismo.com.ar/img/Punta_Loma.jpg',
+  alt: 'Punta Loma',
+  title: 'Punta Loma',
+  description: 'Lobos Marinos',
 },
 {
-  img: 'https://elmedanoturismo.com.ar/img/IMG-20190617-WA0047.jpg',
+  id: 3,
+  img: 'https://elmedanoturismo.com.ar/img/medano2.jpg',
   alt: 'Punta Tombo',
   title: 'Punta Tombo',
   description: 'Disfruta el contacto con la naturaleza',
