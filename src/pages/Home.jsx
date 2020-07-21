@@ -15,10 +15,6 @@ const Home = () => {
       </section>
       <Contacto />
       <Footer />
-      {/* <section id='QuienesSomos'>
-        <QuienesSomos />
-      </section>
-      <Footer /> */}
     </main>
 
   );

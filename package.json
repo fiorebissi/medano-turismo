@@ -1,7 +1,7 @@
 {
   "name": "medano-turismo",
   "version": "1.0.0",
-  "description": "Whenever I start a new project, I don't know what to write for the first commit. After doing a “git init” there is technically nothing there...",
+  "description": "Agencia de Turismo El Medano Turismo - Puerto Madryn Argentina",
   "main": "src/index.js",
   "scripts": {
     "now-build": "npm run build",
@@ -31,7 +31,6 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "file-loader": "^6.0.0",
     "html-critical-webpack-plugin": "^2.1.0",
-    "html-webpack-plugin": "^4.0.4",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
@@ -45,16 +44,15 @@
     "stylelint-config-standard": "^20.0.0",
     "svg-url-loader": "^6.0.0",
     "terser-webpack-plugin": "^3.0.2",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "url-loader": "^4.1.0"
   },
   "homepage": "https://elmedanoturismo.com.ar",
   "dependencies": {
     "@tippyjs/react": "^4.0.2",
     "animate.css": "^3.7.2",
     "fabric": "^3.6.3",
+    "glob": "^7.1.6",
+    "html-webpack-plugin": "^4.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
@@ -62,6 +60,9 @@
     "sweetalert2": "^9.14.0",
     "sweetalert2-react-content": "^3.0.1",
     "tailwindcss": "^1.4.6",
-    "tippy.js": "^6.2.3"
+    "tippy.js": "^6.2.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   }
 }

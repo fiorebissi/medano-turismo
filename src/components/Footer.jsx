@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
-// import { MdCopyright } from 'react-icons/md';
 import '../assets/styles/home.css';
 
 const Footer = () => {
@@ -22,7 +21,9 @@ const Footer = () => {
         </div>
         <div>
           <p>
-            Designed with 💗 by
+            Designed with
+            <span role='img' aria-label='heart'> 💗 </span>
+            by
             {' '}
             <a href='mailto:fiorellabissi@hotmail.com'>Fiorella Bissi</a>
           </p>

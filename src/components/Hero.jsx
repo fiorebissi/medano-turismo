@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className='hero'>
       <div className='cont'>
-        <h1>Puerto Madryn</h1>
+        {/* <h1>Puerto Madryn</h1> */}
         <img className='hero-image' src={HeroImage} width='500' height='300' alt='El Medano Turismo' />
       </div>
 

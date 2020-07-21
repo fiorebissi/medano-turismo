@@ -2,6 +2,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;800&display=swap');
 
 @font-face {
   font-family: 'icomoon';
@@ -18,7 +19,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: never;
+  /* speak: never; */
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -34,9 +35,18 @@
   content: "\e900";
 }
 
-.body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo Da 2', cursive;
 }
+
+h3 {
+  font-weight: 800;
+  color: rgb(123,168,164);
+}
+
 /* HEADER */
 
   .header {
@@ -108,7 +118,7 @@
     line-height: 40px;
     text-align: center;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     left: 5px;
     top: 5px;
     color: white;
@@ -170,6 +180,12 @@
     position: relative;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .event-detail h3 {
+    font-size: 24px;
+    text-shadow: 1px 1px 2px #000000;
   }
 
 
@@ -194,6 +210,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .contact h3 {
+    color: white;
+    font-size: 20px;
+  }
   .form-email input {
     border-color: gray;
     border-style: solid;
@@ -209,11 +229,16 @@
     display: block;
     background: transparent;
     color: white;
-    padding: 10px 0;
+    padding: 5px 0;
     border-radius: 5px;
     width: 100px;
     margin-top: 10px;
     border: 2px solid gray;
+    cursor: pointer;
+    transition-duration: 0.4s;
+  }
+  .form-email button:hover{
+    background: #bdbdbd;
   }
   .social-link {
     display: inline-block;
@@ -239,8 +264,8 @@
   .footer-contacto {
     flex-direction: row;
   }
-  .footer-contacto p {
-    display: inline;
+  .footer-contacto svg {
+    display: inline-block;
   }
 
   @media screen and (max-width: 1023px) {
@@ -264,7 +289,6 @@
     }
     h1 {
       font-size: 2em;
-      z-index: 2;
     }
 
 
@@ -295,7 +319,7 @@
     .menu {
       position: fixed;
       background: rgba(196,175,145,.8);
-      z-index: 1;
+      z-index: 2;
       top: 0;
       left: -100vw;
       width: 100vw;
