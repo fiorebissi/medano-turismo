@@ -15,7 +15,7 @@ export default [{
 },
 {
   id: 3,
-  img: 'https://elmedanoturismo.com.ar/img/medano2.jpg',
+  img: 'https://elmedanoturismo.com.ar/img/Pinguinos.jpg',
   alt: 'Punta Tombo',
   title: 'Punta Tombo',
   description: 'La Reserva de Punta Tombo es la colonia de Pingüinos de Magallanes más importante de la costa patagónica.',
