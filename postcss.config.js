@@ -1,9 +1,9 @@
 const stylelint = require('stylelint');
 const tailwindcss = require('tailwindcss');
-const autoprefixer = require('autoprefixer');
 const postcssImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
 const sortMediaQueries = require('postcss-sort-media-queries');
+const postcssFlexbugsFixes = require('postcss-flexbugs-fixes');
 
 module.exports = {
   plugins: [
@@ -12,11 +12,11 @@ module.exports = {
         stylelint,
       ],
     }),
+    tailwindcss,
+    postcssFlexbugsFixes,
     postcssPresetEnv({
       stage: 0,
     }),
-    tailwindcss,
     sortMediaQueries,
-    autoprefixer,
   ],
 };

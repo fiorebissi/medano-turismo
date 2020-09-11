@@ -10,21 +10,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
     publicPath: 'http://localhost:8080/',
-    chunkFilename: 'js/[id].[chunkhash].js',
   },
   devServer: {
+    historyApiFallback: true,
     contentBase: path.resolve(__dirname, 'dist'),
     open: true,
     port: 8080,
     hot: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        include: /src/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -44,7 +45,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(jpg|png|gif|woff|eot|ttf|svg|mp4|webm|pdf)$/,
+        test: /\.jpg|png|gif|woff|eot|ttf|otf|svg|mp4|webm$/,
         use: {
           loader: 'file-loader',
           options: {
@@ -55,7 +56,9 @@ module.exports = {
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      $dirname: '__dirname',
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'public/index.html'),
     }),
