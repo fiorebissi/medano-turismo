@@ -1,25 +1,24 @@
 import React from 'react';
-import Foto from '../assets/static/IMG-20190617-WA0049.jpg';
+import Layout from '../components/Layout/Layout';
 
-const style = {
-  height: '400px',
-  with: '300px',
-};
 
 const QuienesSomos = () => {
   return (
-    <section id='QuienesSomos' className='grid grid-cols-2 flex justify-center w-screen'>
-      <div className='px-4 py-3'>
-        <img style={style} className='object-contain' src={Foto} alt='Foto' />
-      </div>
-      <div>
-        <h1 className='text-3xl p-3'>¿Quiénes somos?</h1>
-        <p className='text-justify p-2'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium quaerat repellendus quos quis voluptatum eligendi exerc</p>
-        <p className='text-justify p-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, esse, dolore molestias minus laboriosam a illo tempora hic neque aut rem laborum repellendus quod deserunt veritatis </p>
-        <button type='button' className='py-2 px-4 bg-transparent hover:bg-blue-500 border-blue-700 border-2 hover:border-blue-500 rounded-full'>Leer más</button>
-      </div>
-
-    </section>
+   <Layout>
+     <div className='pt-4 text-center'>
+       <h1 className='text-5xl'>Sobre Nosotros</h1>
+     </div>
+     <p>Somos una empresa de espíritu jóven, integrada por tres amigos y profesionales del turismo, en aprendizaje constante, apasionados y comprometidos en la innovación del sector turístico de manera responsable, consciente y sustentable.</p>
+     <div className='pt-3 text-center'>
+       <h1>Visión:</h1>
+       <p>Creemos necesarios los cambios, buscamos ver más allá del producto ofrecido, pudiendo distinguirnos en la exclusividad de cada pasajero haciendo realidad una experiencia inolvidable y acompañándolos en su aventura llamada viaje.</p>
+      <p>Somos como un Médano, estamos en constante movimiento, retroalimentándonos de la naturaleza para así poder avanzar. Por ello es que es indispensable para nosotros interpretar los tiempos y distancias de cada lugar para poder generar una experiencia en conexión con el medio ambiente escapando del impacto y poder transmitirles esto a quienes nos elijan.</p>
+     </div>
+     <div className='pt-3 text-center'>
+       <h1>Misión:</h1>
+       <p>Apuntamos a un turismo profesional, al buen manejo de los servicios, a la satisfacción no solo de los visitantes, sino también al entorno, pudiendo colaborar con las economías locales y respetando el ambiente en el cual vivimos</p>
+     </div>
+   </Layout>
 
   );
 };

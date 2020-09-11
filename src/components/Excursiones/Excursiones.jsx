@@ -20,7 +20,7 @@ class Excursiones extends Component {
           </Container>
         </EventList>
         <div className='px-4 py-4 text-center '>
-        <Link to='/'>Ver todas las excursiones</Link>
+        <Link to='/excursiones'>Ver todas las excursiones</Link>
 
         </div>
       </Section>

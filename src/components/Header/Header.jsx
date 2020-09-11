@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../../static/Medano-color.png';
-import { Image, Container, Menu, Navbar, Link } from './styles';
+import { Image, Navbar, Link } from './styles';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -23,9 +23,10 @@ const Header = () => {
       <Image src={Logo} alt='Logo' />
       </div>
       <div className='flex flex-row p-5'>
-        <Link to='/'>Excursiones</Link>
-        <Link to='/'>Quienes Somos</Link>
-        <Link to='/'>Contacto</Link>
+        <Link to='/'>Home</Link>
+        <Link to='/excursiones'>Excursiones</Link>
+        <Link to='/quienesSomos'>Quienes Somos</Link>
+        <Link to='/contacto'>Contacto</Link>
       </div>
     </Navbar>
    

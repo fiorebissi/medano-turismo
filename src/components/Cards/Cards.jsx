@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import dataExcursiones from '../Excursion';
 import Modal from '../Modal/Modal';
+import { Event, EventDetail, Button }from './styles';
 import '../../styles/home.css';
 
 const Cards = ({ id, img, alt, title, description }) => {
@@ -13,21 +14,21 @@ const Cards = ({ id, img, alt, title, description }) => {
     setIsOpen(true);
   }
   return (
-    <article className='event' key={id}>
-      <figure className='event-imageCont'>
+    <Event key={id}>
+      <div>
         <img className='object-contain' src={img} alt={alt} />
-      </figure>
-      <div className='event-detail'>
-        <h3 className='event-title'>{title}</h3>
-        <p className='event-description'>{description}</p>
-        <button onClick={e => handleClick(e)} type='button' className='px-4 py-2 font-semibold text-blue-700 bg-transparent border border-blue-500 rounded cursor-pointer hover:bg-blue-500 hover:text-white hover:border-transparent'>
-          Reservar!
-        </button>
       </div>
+      <EventDetail>
+        <h3 className='event-title'>{title}</h3>
+        <p className='text-left'>{description}</p>
+        <Button onClick={e => handleClick(e)} type='button'>
+          Reservar!
+        </Button>
+      </EventDetail>
       {isOpen && (
         <Modal setIsOpen={setIsOpen} title={title} />
       )}
-    </article>
+    </Event>
   );
 };
 
