@@ -6,6 +6,16 @@ export const Navbar = styled.div`
 height: 160px;
 color: black;
 background-color: rgb(196,175,145);
+flex-wrap: wrap;
+
+&.menu{
+  &.is-active {
+      left: 0;
+      display: block;
+      z-index: 40;
+    }
+}
+    
 `
 export const Image = styled.img`
 margin: 0 auto;

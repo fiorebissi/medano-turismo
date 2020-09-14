@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Logo from '../../static/Medano-color.png';
 import { Image, Navbar, Link } from './styles';
+import { MdMenu } from 'react-icons/md';
 
 const Header = () => {
+  const SIZE = '24px';
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -18,17 +20,26 @@ const Header = () => {
   };
 
   return (
+    <>
+    <MdMenu onClick={handleClick} className='burger-button' size={SIZE} />
     <Navbar className='flex items-center justify-between w-full'>
-      <div className='w-56 p-2 m-0 text-center'>
+      <div className='p-2 m-0 text-center xl:w-56 lg:w-56 md:w-44 sm:w-36'>
       <Image src={Logo} alt='Logo' />
       </div>
-      <div className='flex flex-row p-5'>
+      <div className='flex flex-wrap p-5'>
+        <Link to='/'>Home</Link>
+        <Link to='/excursiones'>Excursiones</Link>
+        <Link to='/quienesSomos'>Quienes Somos</Link>
+        <Link to='/contacto'>Contacto</Link>
+      </div>
+      <div id='menu' className='flex-col menu'>
         <Link to='/'>Home</Link>
         <Link to='/excursiones'>Excursiones</Link>
         <Link to='/quienesSomos'>Quienes Somos</Link>
         <Link to='/contacto'>Contacto</Link>
       </div>
     </Navbar>
+    </>
    
   );
 };
