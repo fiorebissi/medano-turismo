@@ -24,32 +24,10 @@
     top: 5px;
     color: white;
   }
-  .menu{
-    display: none;
-  }
 
   @media screen and (max-width: 767px) {
     .burger-button {
       display: block;
     }
-    
-    .menu {
-      position: fixed;
-      background: rgba(90, 88, 85, 0.26);
-      z-index: 2;
-      top: 0;
-      left: -100vw;
-      width: 100vw;
-      /* height: 100vh; */
-      bottom: 0;
-      display:flex;
-      align-items: center;
-      justify-content: center;
-      transition: .3s;
-
-    }
-    .menu.is-active{
-      left: 0;
-    }
-
+  
   }

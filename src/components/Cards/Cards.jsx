@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import dataExcursiones from '../Excursion';
 import Modal from '../Modal/Modal';
 import { Event, EventDetail, Button }from './styles';
 

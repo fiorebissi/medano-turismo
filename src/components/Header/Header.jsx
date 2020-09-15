@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../../static/Medano-color.png';
-import { Image, Navbar, Link } from './styles';
+import { Image, Navbar, Link, Container, Menu } from './styles';
 import { MdMenu } from 'react-icons/md';
 
 const Header = () => {
@@ -21,23 +21,21 @@ const Header = () => {
 
   return (
     <>
-    <MdMenu onClick={handleClick} className='burger-button' size={SIZE} />
-    <Navbar className='flex items-center justify-between w-full'>
-      <div className='p-2 m-0 text-center xl:w-56 lg:w-56 md:w-44 sm:w-36'>
-      <Image src={Logo} alt='Logo' />
-      </div>
-      <div className='flex flex-wrap p-5'>
-        <Link to='/'>Home</Link>
-        <Link to='/excursiones'>Excursiones</Link>
-        <Link to='/quienesSomos'>Quienes Somos</Link>
-        <Link to='/contacto'>Contacto</Link>
-      </div>
-      <div id='menu' className='flex-col menu'>
-        <Link to='/'>Home</Link>
-        <Link to='/excursiones'>Excursiones</Link>
-        <Link to='/quienesSomos'>Quienes Somos</Link>
-        <Link to='/contacto'>Contacto</Link>
-      </div>
+    <MdMenu open={open} onClick={handleClick} className='burger-button' id='burger-menu' size={SIZE} />
+    <Navbar>
+      <Container>
+         <div className='p-2 m-0 text-center logo xl:w-56 lg:w-56 md:w-44 sm:w-36'>
+           <Image src={Logo} alt='Logo' />
+         </div>
+         <Menu className='menu'>
+           <ol>
+            <Link to='/'>Home</Link>
+            <Link to='/excursiones'>Excursiones</Link>
+            <Link to='/quienesSomos'>Quienes Somos</Link>
+            <Link to='/contacto'>Contacto</Link>
+           </ol>
+         </Menu>
+      </Container>
     </Navbar>
     </>
    
@@ -46,29 +44,27 @@ const Header = () => {
 
 export default Header;
 
-{/* <>
-<i className='icon-menu burger-button' open={open} onClick={handleClick} role='button' id='burger-menu' tabIndex={0} aria-label='burger' />
-<Navbar className='block'>
-  <Container>
-    <figure className='text-center'>
-      <img src={Logo} height='50' alt='Logo' />
-    </figure>
-    <Menu>
-      <ol>
-        <li>
-          <Link to='/excursiones'>Excursiones</Link>
-        </li>
-        <li>
-          <Link to='quienes'>¿Quiénes Somos?</Link>
-        </li>
-        <li>
-          <Link to='/contacto'>Contacto</Link>
-        </li>
-      </ol>
+{/* <i className='icon-menu burger-button' open={open} onClick={handleClick} role='button' id='burger-menu' tabIndex={0} aria-label='burger' />
+      <header className='header'>
+        <div className='cont'>
+          <figure className='logo'>
+            <img src={Logo} height='50' alt='Logo' />
+          </figure>
+          <nav className='menu'>
+            <ol>
+              <li>
+                <a className='link' href='#excursiones'>Excursiones</a>
+              </li>
+              <li>
+                <a className='link' href='#quienessomos'>¿Quiénes Somos?</a>
+              </li>
+              <li>
+                <a className='link' href='#contacto'>Contacto</a>
+              </li>
+            </ol>
 
-    </Menu>
+          </nav>
 
-  </Container>
+        </div>
 
-</Navbar>
-</> */}
+      </header> */}

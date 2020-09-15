@@ -1,12 +1,13 @@
 import React from 'react';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
+import { Foot, Container, FooterContacto } from './styles';
 import '../../styles/home.css';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-      <div className='cont'>
-        <div className='footer-contacto'>
+    <Foot>
+      <Container>
+        <FooterContacto>
           <p>Contactanos</p>
           <p>
             <FaEnvelope />
@@ -18,7 +19,7 @@ const Footer = () => {
             <a href='tel:+549297465812'>+54 9 297 465812</a>
           </p>
 
-        </div>
+        </FooterContacto>
         <div>
           <p>
             Designed with
@@ -28,9 +29,9 @@ const Footer = () => {
             <a href='mailto:fiorellabissi@hotmail.com'>Fiorella Bissi</a>
           </p>
         </div>
-      </div>
+      </Container>
 
-    </footer>
+    </Foot>
 
   );
 };
