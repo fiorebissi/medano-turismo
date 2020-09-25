@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro';
 
 export const Foot = styled.footer`
-${tw`inset-x-auto bottom-0 flex text-white bg-black`}
+${tw`flex text-white bg-black`}
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -11,7 +11,7 @@ ${tw`inset-x-auto bottom-0 flex text-white bg-black`}
   }
 
   @media (max-width: 480px){
-    display: block;
+      display: block;
       text-align: center;
       border: 1px solid transparent;
   }
@@ -31,10 +31,6 @@ export const Container = styled.div`
     @media (max-width: 1023px) {
       padding: 0;
     }
-`
-
-export const FooterContacto = styled.div`
-flex-direction: row;
 `
 
 export const Ptext = styled.p`

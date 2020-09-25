@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Logo from '../../static/Medano-color.png';
-import { Image, Navbar, Link, Container, Menu } from './styles';
+import { Navbar, Link, Container, Menu , Div, Image } from './styles';
 import { MdMenu } from 'react-icons/md';
 
 const Header = () => {
@@ -21,18 +21,28 @@ const Header = () => {
 
   return (
     <>
-    <MdMenu open={open} onClick={handleClick} className='burger-button' id='burger-menu' size={SIZE} />
+    <Div>
+      <MdMenu onClick={handleClick} className='burger-button' size={SIZE} />
+    </Div>
     <Navbar>
       <Container>
-         <div className='p-1 m-0 text-center bg-white bg-opacity-25 rounded-full logo xl:w-56 lg:w-56 md:w-44 sm:w-36'>
-           <Image src={Logo} alt='Logo' />
-         </div>
+        <figure className='logo'>
+          <Image className='bg-white bg-opacity-50 border border-white rounded-full' height='50' src={Logo} alt='Logo'/>
+        </figure>
          <Menu className='menu'>
            <ol>
-            <Link to='/'>Home</Link>
-            <Link to='/excursiones'>Excursiones</Link>
-            <Link to='/quienesSomos'>Quienes Somos</Link>
-            <Link to='/contacto'>Contacto</Link>
+             <li>
+              <Link to='/'>Home</Link>
+             </li>
+             <li>
+              <Link to='/excursiones'>Excursiones</Link>
+             </li>
+             <li>
+             <Link to='/quienesSomos'>Quienes Somos</Link>
+             </li>
+             <li>
+              <Link to='/contacto'>Contacto</Link>
+             </li>
            </ol>
          </Menu>
       </Container>

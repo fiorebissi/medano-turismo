@@ -6,28 +6,65 @@ export const Navbar = styled.div`
     background-color: rgb(196,175,145);
     color: black;
     display: flex;
-    height: 160px;
+    height: 170px;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    & ol ul {
+  margin: 0;
+  padding: 0;
+  list-style: none
+  }
 
-    @media (max-width: 767px) {
-      display: block;
-      height: auto;
+  & figure {
+    margin: 0;
+  }
 
-      & ol {
-        display: block;
-        height: 50px;
-        flex-wrap: wrap;
-      flex-direction:column;
-      }
-    }
+  & figure img {
+    display: inline;
+  }
+
+  & a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+  }
+
+  & ol {
+  display: flex;
+  height: inherit;
+  }
+
+  & ol li {
+    height: inherit
+  }
+
+  @media (max-width: 767px) {
+    display: block;
+    height: auto;
 
     & ol {
-      display: flex;
-      height: inherit;
+      display: block;
     }
 
+    & ol li {
+      height: 50px;
+    }
+
+    & a {
+    justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    margin-bottom: .5em;
+    }
+
+    & .logo {
+      text-align: center;
+    }
+  }
     
 `
 export const Image = styled.img`
@@ -56,23 +93,11 @@ export const Container = styled.div`
     width: 100%;
     flex:1;
     margin: 0 auto;
-    display: flex;
+    display: inherit;
     justify-content: inherit;
     align-items: inherit;
     height: inherit;
     flex-wrap: inherit;
-
-    @media (max-width: 1023px) {
-      padding: 0;
-    }
-
-    @media (max-width: 767px) {
-      &.logo {
-        text-align: center;
-      }
-    }
-
-
 `
 
 export const Menu = styled.nav`
@@ -81,7 +106,7 @@ height: inherit;
 @media (max-width:767px) {
   position: fixed;
   background: rgba(196,175,145,.8);
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: -100vw;
   width: 100vw;
@@ -95,12 +120,24 @@ height: inherit;
     left: 0;
   }
 }
+`
 
-& ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+export const Div = styled.div`
+
+  & .burger-button {
+  display: none;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  text-align: center;
+  line-height: 40px;
+  position: fixed;
   
+}
 
+@media (max-width: 767px) {
+  & .burger-button {
+    display: block;
+  }
+}
 `

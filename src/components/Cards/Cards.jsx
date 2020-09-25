@@ -40,7 +40,7 @@ const Cards = ({ id, img, alt, title, description, isPage, info, condiciones }) 
         </Button>
         {isPage && (
           <Button onClick={e => handleClickInfo(e)} className='ml-2' type='button'>
-            Mas Info
+            Más Info
           </Button>
         )}
       </EventDetail>

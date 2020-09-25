@@ -1,42 +1,30 @@
 import React from 'react';
-import { Input, Label, Button, Text, Column, Row } from './styles';
-import Image1 from '../../static/medano3.jpg';
+import { Button, Div } from './styles';
+import Image from '../../static/medano3.jpg';
 
 const Form = () => {
   return (
-    <div className='flex flex-row flex-wrap'>
-      <div className='p-3'>
-        <img width='500' className='rounded-lg' src={Image1} alt='Image' />
-      </div>
-      <div className='p-6'>
-        <form>
-          <div className='mb-4'>
-            <Label htmlFor='username'>
+    <div className='flex flex-wrap content-around justify-center h-screen'>
+      <Div>
+        <img className='object-cover rounded-lg' src={Image} alt='Image' />
+      </Div>
+      <div>
+        <form className='ml-4'>
+          <label htmlFor='userName' className='block mb-2 mb-4 text-lg font-bold text-gray-700'>
             Nombre y Apellido
-            <Input type="text" placeholder="Nombre Apellido" required/>
-            </Label>
-          </div>
-          <div className='mb-4'>
-          <Label htmlFor='country'>
-           Provincia
-           <Input type="text" placeholder="Provincia" required/>
-          </Label>
-        </div>
-        <div className='mb-6'>
-          <Label htmlFor='email'>
+            <input className='w-full py-2 rounded shadow-md' required/>
+          </label>
+          <label htmlFor='email' className='block mb-2 mb-4 text-lg font-bold text-gray-700'>
             Email
-            <Input type='text' placeholder='email' required/>
-          </Label>
-        </div>
-        <div className='mb-4'>
-         <Text rows='5' placeholder='Mensaje' />
-        </div>
-        <div className='text-center'>
-          <Button>Enviar</Button>
-        </div>
+            <input className='w-full py-2 rounded shadow-md' required/>
+          </label>
+          <textarea className='w-full rounded shadow-md ' rows='5' placeholder='Mensaje'/>
+          <Button type='button'>Enviar</Button>
+
         </form>
       </div>
     </div>
+    
     
 
   )
