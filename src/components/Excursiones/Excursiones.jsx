@@ -6,17 +6,21 @@ import { Section, Title, EventList, Container, Link } from './styles';
 class Excursiones extends Component {
   constructor(props) {
     super(props);
-    this.state = { exc: dataExcursiones };
+    this.state = { 
+      exc: dataExcursiones,
+      len: dataExcursiones.length,
+    };
   }
 
   render() {
-    const { exc } = this.state;
+    const { exc, len } = this.state;
+    const filterArray = exc.filter(num => num.id <= 4);
     return (
       <Section>
         <Title> Descubrí todas nuestras excursiones </Title>
         <EventList>
           <Container>
-            {exc.map((images) => <Cards key={images.id} {...images} />)}
+            {filterArray.map((images) => <Cards key={images.id} {...images} />)}
           </Container>
         </EventList>
         <div className='px-4 py-4 text-center '>

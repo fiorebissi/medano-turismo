@@ -1,16 +1,31 @@
 import React, { useState } from 'react';
+import InfoModal from '../InfoModal/InfoModal';
 import Modal from '../Modal/Modal';
 import { Event, EventDetail, Button }from './styles';
+import db from '../../database/Excursion';
 
 
-const Cards = ({ id, img, alt, title, description }) => {
+const Cards = ({ id, img, alt, title, description, isPage, info, condiciones }) => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenInfo, setIsOpenInfo] = useState(false);
+  const masInfo = db.forEach((info) => {
+  <li key={info.id}>{info.id} </li>
+  });
+
+  // const masInfo = db.map((info) => <li key={info.id}>{info.condiciones}</li>);
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log('Hola');
+    
     setIsOpen(true);
+  }
+
+  const handleClickInfo = (e) => {
+    e.preventDefault();
+    console.log(masInfo);
+    console.log(db);
+    setIsOpenInfo(true);
   }
   return (
     <Event key={id}>
@@ -19,13 +34,21 @@ const Cards = ({ id, img, alt, title, description }) => {
       </div>
       <EventDetail>
         <h3 className='event-title'>{title}</h3>
-        <p className='text-left'>{description}</p>
+        <p className='p-1 text-left'>{description}</p>
         <Button onClick={e => handleClick(e)} type='button'>
           Reservar!
         </Button>
+        {isPage && (
+          <Button onClick={e => handleClickInfo(e)} className='ml-2' type='button'>
+            Mas Info
+          </Button>
+        )}
       </EventDetail>
       {isOpen && (
         <Modal setIsOpen={setIsOpen} title={title} />
+      )}
+      {isOpenInfo && (
+        <InfoModal setIsOpenInfo={setIsOpenInfo} title={title} info={info} masInfo={masInfo} />
       )}
     </Event>
   );

@@ -24,7 +24,7 @@ const Header = () => {
     <MdMenu open={open} onClick={handleClick} className='burger-button' id='burger-menu' size={SIZE} />
     <Navbar>
       <Container>
-         <div className='p-2 m-0 text-center logo xl:w-56 lg:w-56 md:w-44 sm:w-36'>
+         <div className='p-1 m-0 text-center bg-white bg-opacity-25 rounded-full logo xl:w-56 lg:w-56 md:w-44 sm:w-36'>
            <Image src={Logo} alt='Logo' />
          </div>
          <Menu className='menu'>

@@ -1,25 +1,24 @@
 import React from 'react';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
-import { Foot, Container, FooterContacto } from './styles';
-import '../../styles/home.css';
+import { Foot, Container, Ptext } from './styles';
 
 const Footer = () => {
   return (
     <Foot>
       <Container>
-        <FooterContacto>
+        <div className='flex flex-col'>
           <p>Contactanos</p>
-          <p>
+          <Ptext>
             <FaEnvelope />
             {' '}
-            <a href='mailto:elmedanoturismo@info.com.ar'>elmedanoturismo@info.com.ar</a>
-          </p>
-          <p>
+            <a className='ml-2' href='mailto:elmedanoturismo@info.com.ar'>elmedanoturismo@info.com.ar</a>
+          </Ptext>
+          <Ptext>
             <FaPhone />
-            <a href='tel:+549297465812'>+54 9 297 465812</a>
-          </p>
+            <a className='mr-2' href='tel:+549297465812'>+54 9 297 465812</a>
+          </Ptext>
 
-        </FooterContacto>
+        </div>
         <div>
           <p>
             Designed with
