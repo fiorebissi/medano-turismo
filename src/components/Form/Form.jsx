@@ -9,7 +9,7 @@ const Form = () => {
         <img className='object-cover rounded-lg' src={Image} alt='Image' />
       </Div>
       <div>
-        <form className='ml-4'>
+        <form className='mb-6 ml-4'>
           <label htmlFor='userName' className='block mb-2 mb-4 text-lg font-bold text-gray-700'>
             Nombre y Apellido
             <input className='w-full py-2 rounded shadow-md' required/>

@@ -43,7 +43,11 @@ export const FormEmail = styled.form`
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: 5px;
+
   }
+  @media (max-width: 480px) {
+      margin-left: 20px;
+    }
 
    & button {
     display: block;
