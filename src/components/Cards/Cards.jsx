@@ -9,22 +9,25 @@ const Cards = ({ id, img, alt, title, description, isPage, info, condiciones }) 
 
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenInfo, setIsOpenInfo] = useState(false);
-  const masInfo = db.forEach((info) => {
-  <li key={info.id}>{info.id} </li>
-  });
+  // const masInfo = db.forEach((element) => {
+
+  //   let i = 0;
+  //   const muestra = element.condiciones[i]
+  //   console.log(muestra);
+  //   i++;
+  // })
 
   // const masInfo = db.map((info) => <li key={info.id}>{info.condiciones}</li>);
 
   const handleClick = (e) => {
     e.preventDefault();
-    
     setIsOpen(true);
   }
 
   const handleClickInfo = (e) => {
     e.preventDefault();
-    console.log(masInfo);
-    console.log(db);
+    // console.log(masInfo);
+    // console.log(db);
     setIsOpenInfo(true);
   }
   return (
@@ -48,7 +51,7 @@ const Cards = ({ id, img, alt, title, description, isPage, info, condiciones }) 
         <Modal setIsOpen={setIsOpen} title={title} />
       )}
       {isOpenInfo && (
-        <InfoModal setIsOpenInfo={setIsOpenInfo} title={title} info={info} masInfo={masInfo} />
+        <InfoModal setIsOpenInfo={setIsOpenInfo} title={title} info={info} />
       )}
     </Event>
   );

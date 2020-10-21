@@ -8,12 +8,11 @@ class Excursiones extends Component {
     super(props);
     this.state = { 
       exc: dataExcursiones,
-      len: dataExcursiones.length,
     };
   }
 
   render() {
-    const { exc, len } = this.state;
+    const { exc } = this.state;
     const filterArray = exc.filter(num => num.id <= 4);
     return (
       <Section>

@@ -1,8 +1,9 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import { Title } from './styles';
+import db from '../../database/Excursion';
 
-const InfoModal = ({ setIsOpenInfo, title, info, masInfo }) => {
+const InfoModal = ({ setIsOpenInfo, title, info }) => {
   const handleClick = () => {
     setIsOpenInfo(false);
  }
@@ -11,7 +12,7 @@ const InfoModal = ({ setIsOpenInfo, title, info, masInfo }) => {
       <div className='w-6/12 h-auto px-6 py-8 bg-white rounded-lg'>
           <Title> {title}</Title>
           <p>{info}</p>
-          <ul>{masInfo}</ul>
+          <ul></ul>
           <div className='text-center'>
             <button onClick={handleClick} className='px-4 py-2 font-semibold text-black bg-transparent border border-red-500 rounded hover:bg-red-500 hover:text-white hover:border-transparent'>Cerrar</button>
           </div>

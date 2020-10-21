@@ -13,7 +13,6 @@ export default [{
     3: 'Apta para menores a partir de 6 años de edad',
     4: 'No incluye traslado hacia la operadora de buceo.'
   }
-
 },
 {
   id: 2,
