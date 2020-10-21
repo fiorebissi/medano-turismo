@@ -17,9 +17,8 @@ const ReservaEmail = ({ title }) => {
     setInputs(prev => ({ ...prev,[name]:value}));
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
-    console.log({userName,userEmail,userPhone,nameExcursion,cantidad})
     const {userName,userEmail,userPhone,nameExcursion,cantidad} = inputs
     const response = await fetch('/sendtome', {
       userName,
